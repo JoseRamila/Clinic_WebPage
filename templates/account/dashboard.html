@@ -1,0 +1,72 @@
+
+{% extends "base.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+
+    <div >
+    <h1>Dashboard</h1>
+    {% if request.user.is_superuser == 1 %}
+        <p> Welcome back Nutritionist {{ request.user.first_name|default:request.user.username }} </p>
+    {% elif request.user.is_staff == 1%}
+        <p> Welcome back Assistant {{ request.user.first_name|default:request.user.username }}</p>
+    {% endif %}
+    </div>
+    <div class="button-container">
+        <a href="{% url 'dashboard_paginated' %}">
+            <button class="dashboard-button salmon-button">Paginated view</button>
+        </a>
+
+        <a href="{% url 'dashboard' %}">
+            <button class="dashboard-button">List view</button>
+        </a>
+    </div>
+
+
+    {% if patients_info %}
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Last Name</th>
+                    <th>Sex</th>
+                    <th>Aerobics</th>
+                    <th>Date of Birth</th>
+                    <th>Height</th>
+                    <th>Starting Weight</th>
+                    <th>Most recent Weight</th>
+                    <th>Public ID</th>
+                </tr>
+            </thead>
+            {% for p in patients_info %}
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{% url 'edit_patient' public_id=p.public_id %}">
+                                Edit patient info
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'appointment' public_id=p.public_id %}">
+                                {{ p.name }}
+                            </a>
+                        </td>
+                        <td>{{ p.surname }}</td>
+                        <td>{{ p.sex }}</td>
+                        <td>{{ p.aerobics }}</td>
+                        <td>{{ p.date_of_birth|default:"**" }}</td>
+                        <td>{{ p.height|default:"**" }}</td>
+                        <td>{{ p.starting_weight|default:"**" }}</td>
+                        <td>{{ p.recent_weight|default:"**" }}</td>
+                        <td>{{ p.public_id|default_if_none:"**" }}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No patient info available.</p>
+    {% endif %}
+    {% if page_obj %}
+            {% include "account/pagination.html" with page=page_obj %}
+    {% endif %}
+{% endblock %}

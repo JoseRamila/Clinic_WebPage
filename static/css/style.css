@@ -1,0 +1,359 @@
+
+
+/* Estilo para el formulario */
+.login-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"]{
+   width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Estilo para el botón de envío */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo para el botón de envío al pasar el cursor por encima */
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Estilo para el mensaje de error */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+/* Estilos generales */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+#header {
+  background-color: salmon;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+#header .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#header .menu li {
+  margin: 0 10px;
+}
+
+#header .menu li.selected a {
+  color: white;
+  text-decoration: none;
+}
+
+#header .user {
+  font-weight: bold;
+  color: white;
+}
+
+#header .user a {
+  color: white;
+  text-decoration: none;
+}
+
+#content {
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos específicos de la clínica */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  color: salmon;
+}
+
+.btn {
+  background-color: salmon;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn{}
+
+.btn:hover {
+  background-color: #ff8566;
+}
+
+.form-control {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-label {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.form-select {
+  appearance: none;
+  background-color: #f5f5f5;
+}
+/* Estilos generales */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+#header {
+  background-color: salmon;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+#header .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#header .menu li {
+  margin: 0 10px;
+  text-underline-mode: false;
+}
+
+#header .menu li.selected a {
+  color: white;
+  text-decoration: none;
+  background-color: #F7B6B6;
+  text-underline: #F7B6B6;
+
+}
+
+#header .user {
+  font-weight: bold;
+  color: white;
+}
+
+#header .user a {
+  color: white;
+  text-decoration: none;
+}
+
+#content {
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos específicos de la clínica */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  color: salmon;
+}
+
+.btn {
+  background-color: salmon;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff8566;
+}
+
+.form-control {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-label {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.form-select {
+  appearance: none;
+  background-color: #f5f5f5;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #F7B6B6;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table td {
+  font-size: 14px;
+}
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+p strong {
+  color: #F7B6B6;
+  font-weight: bold;
+}
+
+p em {
+  font-style: italic;
+}
+
+p a {
+  color: #F7B6B6;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: #F7B6B6;
+}
+a {
+  color: #F7B6B6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFC3C3;
+  text-decoration: underline;
+}
+
+.patient-details {
+  background-color: #F7B6B6;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dashboard-button {
+    margin-left: 10px;
+    background-color: salmon;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+.salmon-button {
+    margin: 0;
+}
+
